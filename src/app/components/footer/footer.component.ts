@@ -7,18 +7,26 @@ import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@an
   styleUrl: './footer.component.scss'
 })
 
-export class Footer implements OnInit, OnChanges, OnDestroy{
+export class FooterComponent implements OnInit, OnChanges, OnDestroy{
   @Input()
   title!: string
 
   @Input()
   counter!: number;
 
+  @Input()
+  complete: boolean = true
+
   staticValue = 'static value';
 
   ngOnInit(): void {
-    console.log('footer component initialized');
+    //
+    console.log('footer component initialized');``
     console.log(this.title);
+    if (this.complete) {
+      this.staticValue = 'something else'
+      console.log(this.staticValue)
+    }
   }
 
   ngOnDestroy() {

@@ -1,6 +1,12 @@
 <h1>Welcome to My Angular App!</h1>
 <app-hello></app-hello>
 
-<app-footer [title]="'Example'" [counter]="counter2"></app-footer>
+<!--<app-footer [title]="'Example'" [counter]="counter2"></app-footer>-->
 
-<button (click)="addToCount()">Add to count</button>
+<!--<button (click)="addToCount()">Add to count</button>-->
+
+<!--making a new input-->
+<app-footer [title]="'Example'" [counter]="counter2" [complete]="complete"></app-footer>
+
+<app-counter (counterChange)="onCounterChanged($event)"></app-counter>
+{{ message }}
